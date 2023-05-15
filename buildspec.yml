@@ -17,6 +17,7 @@ phases:
       - echo Prebuild ops
       - pip3 install pycryptodome
       - pip3 install pillow
+      - pip3 install gensim
       - pip3 install -r requirement.txt
   build:
     commands:
