@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/ClickandBuy
+ExecStart=/home/ubuntu/env/bin/ClickandBuy --access-logfile - --workers 3 --bind unix:/home/ubuntu/ClickandBuy/ecommerce/ecommerce.sock ecommerce.wsgi:application
+
+       
+[Install]
+WantedBy=multi-user.target
