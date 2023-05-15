@@ -15,8 +15,7 @@ phases:
   pre_build:
     commands:
       - echo Prebuild ops
-      - cd ClickandBuy
-      - pip3 install -r requirements.txt
+      - pip3 install -r requirement.txt
   build:
     commands:
       - echo Building the application 
